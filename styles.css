@@ -2,8 +2,61 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
 }
 
-h1 {
-    color: #333;
+header {
+    background-color: #87cefa;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#choices {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.choice {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.choice img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.choice h3 {
+    margin-top: 10px;
+    color: #87cefa;
+}
+
+footer {
+    background-color: #87cefa;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
