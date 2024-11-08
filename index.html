@@ -41,26 +41,34 @@
         <p>E-mail: <a href="mailto:jeremy.jalink@gmail.com">jeremy.jalink@gmail.com</a></p>
     </footer>
 
-    <script>
-        function showContent(topic) {
-            let contentSection = document.getElementById("content");
-            let content = "";
+<script>
+    function showContent(topic) {
+        let contentSection = document.getElementById("content");
+        let file = "";
 
-            if (topic === "ai") {
-                content = "<h2>Inzet van AI</h2><p>Hier kun je informatie en voorbeelden over het gebruik van AI toevoegen.</p>";
-            } else if (topic === "learning") {
-                content = "<h2>Leeroplossingen</h2><p>Hier kun je informatie en voorbeelden over leeroplossingen toevoegen.</p>";
-            } else if (topic === "skills") {
-                content = "<h2>Vaardigheden</h2><p>Hier kun je informatie en voorbeelden van vaardigheden toevoegen.</p>";
-            }
-
-            content += '<button onclick="clearContent()">Terug naar hoofdmenu</button>';
-            contentSection.innerHTML = content;
+        if (topic === "ai") {
+            file = "ai.html";
+        } else if (topic === "learning") {
+            file = "learning.html";
+        } else if (topic === "skills") {
+            file = "skills.html";
         }
 
-        function clearContent() {
-            document.getElementById("content").innerHTML = "";
-        }
-    </script>
+        fetch(file)
+            .then(response => response.text())
+            .then(data => {
+                contentSection.innerHTML = data + '<button onclick="clearContent()">Terug naar hoofdmenu</button>';
+            })
+            .catch(error => {
+                contentSection.innerHTML = "<p>Er is een fout opgetreden bij het laden van de inhoud.</p>";
+                console.error("Error loading content:", error);
+            });
+    }
+
+    function clearContent() {
+        document.getElementById("content").innerHTML = "";
+    }
+</script>
+    
 </body>
 </html>
