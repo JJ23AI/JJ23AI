@@ -38,7 +38,7 @@ section {
 }
 
 .choice img {
-    width: 80%; /* Verkleint de afbeelding tot 80% van de blokbreedte */
+    width: 30%; /* Verkleint de afbeelding tot 80% van de blokbreedte */
     height: auto;
     border-radius: 8px;
 }
