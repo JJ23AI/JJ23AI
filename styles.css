@@ -32,17 +32,19 @@ section {
 }
 
 .choice {
-    width: 30%;
+    width: 30%; /* Maakt de blokken elk 30% breed, zodat er drie naast elkaar passen */
     margin: 10px;
     text-align: center;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .choice img {
-    width: 100%;
+    width: 100%; /* Zorgt ervoor dat de afbeelding de breedte van het blok vult */
     height: auto;
     border-radius: 8px;
 }
+    
 
 .choice h3 {
     margin-top: 10px;
