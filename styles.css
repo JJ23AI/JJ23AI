@@ -27,20 +27,18 @@ section {
 
 #choices {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center; /* Centreert de blokken in het midden van de pagina */
+    gap: 20px; /* Voegt ruimte toe tussen de blokken */
 }
 
 .choice {
-    width: 30%; /* Maakt de blokken elk 30% breed, zodat er drie naast elkaar passen */
-    margin: 10px;
+    flex: 1 1 200px; /* Maakt de blokken responsief, minimaal 200px breed */
+    max-width: 250px; /* Zorgt ervoor dat de blokken niet te breed worden */
     text-align: center;
-    cursor: pointer;
-    box-sizing: border-box;
 }
 
 .choice img {
-    width: 100%; /* Zorgt ervoor dat de afbeelding de breedte van het blok vult */
+    width: 80%; /* Verkleint de afbeelding tot 80% van de blokbreedte */
     height: auto;
     border-radius: 8px;
 }
