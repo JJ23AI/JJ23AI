@@ -66,7 +66,7 @@ section {
 }
 
 .text-container {
-    max-width: 600px; /* Pas dit aan naar de gewenste breedte */
+    max-width: 250px; /* Pas dit aan naar de gewenste breedte */
     margin: 0 auto; /* Centreert het tekstblok op de pagina */
     line-height: 1.6; /* Verbetert de leesbaarheid door regelafstand */
 }
