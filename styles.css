@@ -49,6 +49,22 @@ section {
     color: #87cefa;
 }
 
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Lijnt de afbeelding en de tekst uit aan de bovenkant */
+    gap: 20px; /* Ruimte tussen de afbeelding en de lijst */
+}
+
+.content-container img {
+    flex-shrink: 0; /* Zorgt ervoor dat de afbeelding niet krimpt */
+}
+
+.content-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
 footer {
     background-color: #87cefa;
     padding: 20px;
